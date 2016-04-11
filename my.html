@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试js</title>
+	<script>
+		'use strict';
+		var a = 1;
+		var b = '1';
+		console.log(a==b);
+		console.log(a===b);
+		console.log("数组");
+		var array = [1,2,3,'4','5','6',null,false];
+
+		array.name  = "zhouyang";
+		//清空数组的方法
+		//array = [];
+		//array.length = 0;
+		for ( var a in array){
+			console.log(array[a]);
+		}
+		console.log(array.name);
+
+		//定义对象
+		console.log("对象");
+		var person ={
+			name : "zhouyang",
+			age : 25,
+			language : ['chinese','english','java','javascript'],
+			country : 'china',
+			city : 'beijing'	
+		}
+
+		//console.log(person.language.length);
+		//方法对象
+		var myfunction = {
+			iteratorArray : function(arr) {
+				for (var i = arr.length - 1; i >= 0; i--) {
+					console.log(arr[i]);
+				};
+			}
+		}
+
+		myfunction.iteratorArray(person.language);
+
+
+		console.log("strict pattern");
+
+		var abc = 'Hello, world';
+		console.log(abc);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
