@@ -6,9 +6,10 @@
 	<script type="text/javascript">
 		'use strict'
 
+		//这种写法的一个作用是 可以减少在不同js文件中定义全局变量而导致的命名冲突
 		var myfunction = {
 			iteratorMap : function(mymap){
-				for(var key in mymap){
+				for(var key of mymap){
 					console.log(key);
 				}
 			}
@@ -21,11 +22,102 @@
 		map1.set('age',12);
 		console.log(map1);
 
+		//arguements的使用
+		var arguefunction = function(){
+			console.log("打印方法的参数列表");
+			//alert(arguments.length);
+			for(var arg of arguments){
+				console.log(arg);
+			}
+
+		}
+
+		arguefunction('a','c','d',1,null);	
+
+		//rest的使用
+		var restfunction = function(a,b,...rest){
+			console.log(a);
+			console.log(b);
+			console.log(rest);
+		}
+
+		restfunction(1,2,3,4,5,5);
+
+
+		var caculatecircle = function (r,pi){
+			if(arguments.length === 0){
+				return "输入参数有误";
+			}else if(arguments.length ===1 ){
+				pi = 3.14;
+			}
+			return 2*pi*r;
+		}
+		console.log(caculatecircle(3,3.141592));
+		console.log(caculatecircle(3));
+		// foo();
+
+
+
+		function foo() {
+			// alert(this.alert());
+			//函数的声明会被提到方法的上面执行，但是赋值不会 所以会alert(hello undefined)			
+		    var x = 'Hello, ' + y
+		    //alert(x);
+		    var y = 'Bob';
+		}
+
+
+		var str = "abc";
+
+		for(var s in str){
+			console.log(str[s]);
+		}
+
+		//数组的map和reduce
+		console.log(string2int("12312"));
+
+		//数字字符串转成数字
+		function string2int(s) {
+			// var arr = [];
+			// for(var i in s){
+			// 	arr[i] = s[i];
+			// }	
+			// return arr.map(function(x){
+			// 	return x*1;
+			// }).reduce(function(x,y){
+			// 	return x*10+y;
+			// });
+			
+			//使用了javascript的弱类型特性，自动转换
+			return s*1;
+			
+		}
+
+		//把数组中的字符首字母大写
+		function normalize(arr) {
+		    return arr.map(function(x){
+		      var result = x.toLowerCase();
+		      var start = result.substr(0,1);
+		      start = start.toUpperCase();
+		      return start+result.substr(1);
+		    });   
+		}
+
+		//使用filter删除数组中的偶数
+		var testarr = [1,2,2,3,4,5,6,7,8];
+		var result = testarr.filter(function(x){
+			return x%2 !== 0
+		});
+		console.log(result);
+
+		//使用sort对数组进行排序
+
+
+
 		
+	
 
-
-
-
+		//javascript 的全局变量 会方法window这个默认全局变量的属性中
 
 	</script>
 </head>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	  
+
+	    function Person (id,name,age){
+    		this.id = id;
+	    	this.name = name;
+	    	this.age = age;
+	    }
+
+		var data = [new Person(1,"zhouyang",25),new Person(2,"zhouyang1",26),new Person(3,"zhouyang2",27)];
+
+		// console.log(data[0].name);
+		loadTableData("",".table-bordered","id","name","age");
+
+		function loadTableData(url,tableselector,...rest){
+			var html = "";
+			// $.get(url,function(data){
+				for(var index in data){
+					html += "<tr>";
+					for(var rindex in rest){
+						html += "<td>"+data[index][rest[rindex]]+"</td>";
+					}
+					html += "</tr>";
+				}
+				// var table = $(".table");
+				// alert(table.attr("class"));
+				// alert($("#mytable").attr("id"));
+				$(tableselector + " > tbody").html(html);
+			// });
+			console.log(html);
+		}
+
+
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
