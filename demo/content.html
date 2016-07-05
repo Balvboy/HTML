@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link href="./css/flat-ui.css" rel="stylesheet">
+	<link href="./css/docs.css" rel="stylesheet">
+	<link rel="shortcut icon" href="./img/favicon.ico">
+	<script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/api.js"></script>
+
+</head>
+<body style="background-color:#ECF0F1">
+	<nav class="navbar navbar-inverse margin_bottom_0" role="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+				<span class="sr-only">Toggle navigation</span>
+			</button>
+			<a class="navbar-brand" href="#">Online API Manage Platform</a>
+		</div>
+
+		<div class="btn-group margin_top_5 float_left">
+			<button class="btn btn-inverse dropdown-toggle version-drop" type="button" data-toggle="dropdown">
+				api versions <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu version" role="menu">
+				<li><a href="#" version-data="V1.0 update some api about use info and integrate pay bills function with alipay and wechat">v1.0</a></li>
+				<li><a href="#" version-data="V2.0 update some api about use info and integrate pay bills function with alipay and wechat">v2.0</a></li>
+				<li><a href="#" version-data="V3.0 update some api about use info and integrate pay bills function with alipay and wechat">v3.0</a></li>
+				<li class="divider"></li>
+				<li><a href="#">about</a></li>
+			</ul>
+		</div>
+
+		<div class="collapse navbar-collapse float_left" id="navbar-collapse-01">
+			<form class="navbar-form navbar-right" action="#" role="search">
+				<div class="form-group">
+					<div class="input-group">
+						<input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
+						<span class="input-group-btn">
+							<button type="submit" class="btn"><span class="fui-search"></span></button>
+						</span>
+					</div>
+				</div>
+			</form>
+		</div><!-- /.navbar-collapse -->
+
+		<div class="btn-group margin_top_5 float_right">
+			<button class="btn btn-inverse dropdown-toggle" type="button" data-toggle="dropdown">
+				admin <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu setting " role="menu">
+				<li><a href="#">profile</a></li>
+				<li><a href="#">setting</a></li>
+			</ul>
+		</div>
+
+	</nav><!-- /navbar -->
+	<div class="alert alert-info margin_bottom_0" role="alert">V1.0 update some api about use info and integrate pay bills function with alipay and wechat</div>
+	<div class="row">
+		<div class="col-xs-3">
+			<div class="list-group">
+				<a href="#" class="list-group-item active">
+					接口1
+				</a>
+				<a href="#" class="list-group-item">接口2</a>
+				<a href="#" class="list-group-item">接口3</a>
+				<a href="#" class="list-group-item">接口4</a>
+				<a href="#" class="list-group-item">接口5</a>
+				<a href="#" class="list-group-item">接口2</a>
+				<a href="#" class="list-group-item">接口3</a>
+				<a href="#" class="list-group-item">接口4</a>
+				<a href="#" class="list-group-item">接口5</a>
+				<a href="#" class="list-group-item">接口2</a>
+				<a href="#" class="list-group-item">接口3</a>
+				<a href="#" class="list-group-item">接口4</a>
+				<a href="#" class="list-group-item">接口5</a>
+				<a href="#" class="list-group-item">接口2</a>
+				<a href="#" class="list-group-item">接口3</a>
+				<a href="#" class="list-group-item">接口4</a>
+				<a href="#" class="list-group-item">接口5</a>
+				<a href="#" class="list-group-item">接口2</a>
+				<a href="#" class="list-group-item">接口3</a>
+				<a href="#" class="list-group-item">接口4</a>
+				<a href="#" class="list-group-item">接口5</a>
+			</div>
+		</div>
+		<div class="col-xs-9 content">
+			<div class="span8">
+				<h2>
+					接口1
+				</h2>
+				<h5 class="api-method">GET</h5>
+				<div class="alert alert-danger api-desc" role="alert">接口1的描述</div>
+				<span>请求地址：</span>
+				<div class="alert alert-warning api-url" role="alert">http://localhost:8080/ent/lawyer</div>
+				<span>请求参数：</span>
+				<div class="btn-group btn-group-xs float_right margin_right_20" role="group" aria-label="...">
+					<button type="button" class="btn btn-success">选填</button>
+					<button type="button" class="btn btn-info">how</button>
+					<button type="button" class="btn btn-danger">必填</button>
+				</div>
+				<table class="table api-param">
+					<thead>
+						<tr>
+							<th>参数名</th>
+							<th>参数描述</th>
+							<th>默认值</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="danger">
+							<td>Tanmay</td>
+							<td>Bangalore</td>
+							<td>560001</td>
+						</tr>
+						<tr class="success">
+							<td>Sachin</td>
+							<td>Mumbai</td>
+							<td>400003</td>
+						</tr>
+						<tr class="info">
+							<td>Uma</td>
+							<td>Pune</td>
+							<td>411027</td>
+						</tr>
+					</tbody>
+				</table>
+				<span>返回数据：</span>
+				<pre class="api-json">
+					{
+					"auto_complete_triggers":
+					[
+					{
+					"characters": "<",
+					"selector": "text.html"
+				},
+				{
+				"characters": "bs3",
+				"selector": "text.html"
+			}
+			],
+			"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+			"font_size": 18,
+			"ignored_packages":
+			[
+			]
+		}
+	</pre>
+
+	<span>在线调试：</span>
+
+</div>
+</div>
+</div>
+</body>
+</html>
