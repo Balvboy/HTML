@@ -5,6 +5,12 @@
 .margin_top_5{
 	margin-top: 5px!important;
 }
+.margin_top_50{
+	margin-top: 50px!important;
+}
+.pad_top_53{
+	padding-top: 55px;
+}
 .margin_right_20{
 	margin-right: 20px;
 }
@@ -21,6 +27,25 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+.width_100{
+	width: 100%!important;
+}
+.back{
+	width: 100%;
+	background: url('../img/back.jpg') no-repeat;
+	color: #000000;
+	padding-top: 305px!important;
+    padding-bottom: 600px!important;
+}
+.bor_rad_0{
+	border-radius: 0rem!important;
+}
+
+.posi_fix{
+	position: fixed;
+	width: 100%;
+    z-index: 9999;
 }
 
 #override

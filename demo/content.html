@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>demo</title>
+	<title>Online API </title>
 	<link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link href="./css/flat-ui.css" rel="stylesheet">
@@ -14,7 +14,7 @@
 
 </head>
 <body style="background-color:#ECF0F1">
-	<nav class="navbar navbar-inverse margin_bottom_0" role="navigation">
+	<nav class="navbar navbar-inverse margin_bottom_0 bor_rad_0 posi_fix" role="navigation">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
 				<span class="sr-only">Toggle navigation</span>
@@ -24,12 +24,25 @@
 
 		<div class="btn-group margin_top_5 float_left">
 			<button class="btn btn-inverse dropdown-toggle version-drop" type="button" data-toggle="dropdown">
-				api versions <span class="caret"></span>
+				versions <span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu version" role="menu">
 				<li><a href="#" version-data="V1.0 update some api about use info and integrate pay bills function with alipay and wechat">v1.0</a></li>
 				<li><a href="#" version-data="V2.0 update some api about use info and integrate pay bills function with alipay and wechat">v2.0</a></li>
 				<li><a href="#" version-data="V3.0 update some api about use info and integrate pay bills function with alipay and wechat">v3.0</a></li>
+				<li class="divider"></li>
+				<li><a href="#">about</a></li>
+			</ul>
+		</div>
+
+		<div class="btn-group margin_top_5 float_left">
+			<button class="btn btn-inverse dropdown-toggle version-drop" type="button" data-toggle="dropdown">
+				enviroments <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu version" role="menu">
+				<li><a href="#" version-data="V1.0 update some api about use info and integrate pay bills function with alipay and wechat">develop</a></li>
+				<li><a href="#" version-data="V2.0 update some api about use info and integrate pay bills function with alipay and wechat">test</a></li>
+				<li><a href="#" version-data="V3.0 update some api about use info and integrate pay bills function with alipay and wechat">product</a></li>
 				<li class="divider"></li>
 				<li><a href="#">about</a></li>
 			</ul>
@@ -53,19 +66,20 @@
 				admin <span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu setting " role="menu">
-				<li><a href="#">profile</a></li>
-				<li><a href="#">setting</a></li>
+				<li><a data-toggle="modal" href='#profile'>profile</a></li>
+				<li><a data-toggle="modal" href='#setting'>setting</a></li>
 			</ul>
 		</div>
 
 	</nav><!-- /navbar -->
-	<div class="alert alert-info margin_bottom_0" role="alert">V1.0 update some api about use info and integrate pay bills function with alipay and wechat</div>
+	<div class="alert alert-info margin_bottom_0 pad_top_53" role="alert">V1.0 update some api about use info and integrate pay bills function with alipay and wechat</div>
 	<div class="row">
 		<div class="col-xs-3">
 			<div class="list-group">
-				<a href="#" class="list-group-item active">
-					接口1
+				<a href="#" class="list-group-item" id="addbtn">
+					添加api
 				</a>
+				<a href="#" class="list-group-item active">接口1</a>
 				<a href="#" class="list-group-item">接口2</a>
 				<a href="#" class="list-group-item">接口3</a>
 				<a href="#" class="list-group-item">接口4</a>
@@ -75,17 +89,6 @@
 				<a href="#" class="list-group-item">接口4</a>
 				<a href="#" class="list-group-item">接口5</a>
 				<a href="#" class="list-group-item">接口2</a>
-				<a href="#" class="list-group-item">接口3</a>
-				<a href="#" class="list-group-item">接口4</a>
-				<a href="#" class="list-group-item">接口5</a>
-				<a href="#" class="list-group-item">接口2</a>
-				<a href="#" class="list-group-item">接口3</a>
-				<a href="#" class="list-group-item">接口4</a>
-				<a href="#" class="list-group-item">接口5</a>
-				<a href="#" class="list-group-item">接口2</a>
-				<a href="#" class="list-group-item">接口3</a>
-				<a href="#" class="list-group-item">接口4</a>
-				<a href="#" class="list-group-item">接口5</a>
 			</div>
 		</div>
 		<div class="col-xs-9 content">
@@ -131,30 +134,81 @@
 				</table>
 				<span>返回数据：</span>
 				<pre class="api-json">
-					{
-					"auto_complete_triggers":
-					[
-					{
-					"characters": "<",
-					"selector": "text.html"
-				},
-				{
-				"characters": "bs3",
-				"selector": "text.html"
-			}
-			],
-			"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
-			"font_size": 18,
-			"ignored_packages":
-			[
-			]
-		}
-	</pre>
+				</pre>
+				<span>在线调试：</span>
 
-	<span>在线调试：</span>
+			</div>
+		</div>
+	</div><!--div row end -->
+	<div class="modal fade margin_top_50"  id="profile">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">Profile</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>profile</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
+	<div class="modal fade margin_top_50" id="setting">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Setting</h4>
+				</div>
+				<div class="modal-body">
+					settings
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade margin_top_50" id="add">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">add</h4>
+				</div>
+				<div class="modal-body">
+					add
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade margin_top_50" id="update">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">update</h4>
+				</div>
+				<div class="modal-body">
+					update
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
-</div>
-</div>
-</div>
 </body>
 </html>
