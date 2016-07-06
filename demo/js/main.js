@@ -1,6 +1,22 @@
-$(function(){
-	$("select").select2({dropdownCssClass: 'dropdown-inverse'});
-	$(".list-group-item").click(function(e){
+require.config({
+    paths: {
+        jquery: 'jquery.min',
+       	flat: 'flat-ui.min',
+        //bootstrap:'bootstrap.min'
+        modal: 'modal'
+    },
+    shim : {  
+    			flat : {
+    				deps : ['jquery']
+    			},
+	            modal: {  //设置依赖，表示bootstrap需要依赖jquery
+	                deps : [ 'jquery' ]
+	               // exports : 'bootstrap'  
+	            }  
+          }  
+});
+require(['jquery','modal'], function($) {
+    $(".list-group-item").click(function(e){
 		if($(e.target).attr("id")=="addbtn"){
 			$('#add').modal();
 		}else{
@@ -35,4 +51,8 @@ $(function(){
 	$(".navbar-brand").click(function(){
 		window.location.href="./login.html";
 	})
+});
+
+require(['jquery','flat'],function($){
+	$("select").select2({dropdownCssClass: 'dropdown-inverse'});
 })

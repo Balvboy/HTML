@@ -11,6 +11,18 @@
 .pad_top_53{
 	padding-top: 55px;
 }
+.pad_top_100{
+	padding-top: 100px;
+}
+.pad_top_3{
+	padding-top: 3px;
+}
+.padding_left_20{
+	padding-left: 20%;
+}
+.padding_right_20{
+	padding-right: 20%;
+}
 .margin_right_20{
 	margin-right: 20px;
 }
@@ -24,12 +36,18 @@
 	float:right!important;
 }
 .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  display: block!important;
+  margin-left: auto!important;
+  margin-right: auto!important;
 }
 .width_100{
 	width: 100%!important;
+}
+.width_750{
+	width: 750px!important;
+}
+.width_60{
+	width: 60%!important;
 }
 .back{
 	width: 100%;
@@ -47,7 +65,14 @@
 	width: 100%;
     z-index: 9999;
 }
-
+.inputDiv{
+	margin-left: 30%!important;
+    margin-right: 30%!important;
+    width: 40%;
+}
+.inputDiv>button {
+	width: 100%!important;
+}
 #override
 .table>thead>tr>td.danger, .table>tbody>tr>td.danger, .table>tfoot>tr>td.danger, .table>thead>tr>th.danger, .table>tbody>tr>th.danger, .table>tfoot>tr>th.danger, .table>thead>tr.danger>td, .table>tbody>tr.danger>td, .table>tfoot>tr.danger>td, .table>thead>tr.danger>th, .table>tbody>tr.danger>th, .table>tfoot>tr.danger>th{
 	background-color: #ec7063;
